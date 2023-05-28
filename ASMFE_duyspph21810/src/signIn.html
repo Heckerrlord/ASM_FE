@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/custom/styleacc.css" />
+  </head>
+  <body ng-controller="myCtrl">
+    <div class="page">
+      <div class="container">
+        <div class="left">
+          <div class="login">Login</div>
+          <div class="eula">
+            By logging in you agree to the ridiculously long terms that you
+            didn't bother to read <a href="signUp.html">John us</a>
+          </div>
+        </div>
+        <div class="right">
+          <div class="form">
+            <label for="username">Tên đăng nhập:</label>
+            <input
+              type="text"
+              id="username"
+              ng-model="dataUser.username"
+              required
+            />
+
+            <label for="password">Mật khẩu:</label>
+            <input
+              type="password"
+              id="password"
+              ng-model="dataUser.password"
+              required
+            />
+
+            <button type="button" class="submit" ng-click="login()">
+              Đăng nhập
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../lib/angular.min.js"></script>
+    <script>
+      var app = angular.module("myModule", []);
+      app.controller("myCtrl", function ($scope, $http, $rootScope) {
+        $scope.dataUser = {
+          username: "",
+          password: "",
+        };
+
+        $scope.lstUsers = [];
+        $http.get("http://localhost:3000/account").then(function (response) {
+          $scope.lstUsers = response.data;
+        });
+        $scope.loggedIn = false;
+
+        $scope.login = function () {
+          for (var i = 0; i < $scope.lstUsers.length; i++) {
+            if (
+              $scope.dataUser.username == $scope.lstUsers[i].username &&
+              $scope.dataUser.password == $scope.lstUsers[i].password
+            ) {
+              $scope.loggedIn = true;
+              break;
+            }
+          }
+
+          if ($scope.loggedIn) {
+            alert("Đăng nhập thành công!");
+            window.location.href = "index.html";
+            $rootScope.rolee = $scope.lstUsers[i].role;
+          } else {
+            alert("Đăng nhập thất bại!");
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

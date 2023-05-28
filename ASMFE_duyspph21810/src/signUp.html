@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+  <head>
+    <title>Signup</title>
+    <style></style>
+    <link rel="stylesheet" href="../css/custom/styleacc.css" />
+  </head>
+  <body ng-controller="myCtrl">
+    <div class="page">
+      <div class="container">
+        <div class="left">
+          <div class="signup">Sign Up</div>
+          <div class="eula">
+            Bằng việc đăng ký, bạn đồng ý với các điều khoản dài vô cùng mà bạn
+            không cố gắng đọc
+          </div>
+        </div>
+        <div class="right">
+          <div class="form">
+            <label for="email">Tên đăng nhập</label>
+            <input type="email" id="email" ng-model="tk.username" />
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" ng-model="tk.password" />
+            <label for="confirm-password">Xác nhận mật khẩu</label>
+
+            <input
+              type="password"
+              id="confirm-password"
+              ng-model="password2"
+            />
+            <select
+              name=""
+              id=""
+              style="margin-top: 3px; padding: 5px; width: 100%"
+            >
+              <option value="" selected disabled>Chọn chức vụ</option>
+              <option value="1">Admin</option>
+              <option value="2">Staff</option>
+            </select>
+            <button type="submit" class="submit">Đăng ký</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User CRUD</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .container {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- User Form -->
+      <div class="card">
+        <div class="card-header">Add User</div>
+        <div class="card-body">
+          <form id="userForm">
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" class="form-control" id="fullname" required />
+            </div>
+            <div class="form-group">
+              <label for="photo">Photo</label>
+              <input type="text" class="form-control" id="photo" required />
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="text" class="form-control" id="phone" required />
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+          </form>
+        </div>
+      </div>
+
+      <br />
+
+      <!-- User Table -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Full Name</th>
+            <th>Photo</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Phone</th>
+              
+          </tr>
+        </thead>
+        <tbody id="userTableBody">
+          <!-- User rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+<!-- <button class="btn btn-info">Edit</button>
+<button class="btn btn-danger">Delete</button> -->

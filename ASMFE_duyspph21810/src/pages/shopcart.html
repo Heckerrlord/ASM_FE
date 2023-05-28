@@ -1,0 +1,112 @@
+<section class="shopCart">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+  />
+  <div class="container">
+    <div class="contentbar">
+      <!-- Start row -->
+      <div class="row">
+        <!-- Start col -->
+        <div class="col-md-12 col-lg-12 col-xl-12">
+          <div class="card m-b-30">
+            <div class="card-header">
+              <h5 class="card-title">Cart</h5>
+            </div>
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                  <div class="cart-container">
+                    <div class="cart-head">
+                      <div class="table-responsive">
+                        <table class="table table-borderless">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Action</th>
+                              <th scope="col">Photo</th>
+                              <th scope="col">Product</th>
+                              <th scope="col">Qty</th>
+                              <th scope="col">Price</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr ng-repeat="lit in cartList">
+                              <th scope="row">{{$index}}</th>
+                              <td>
+                                <a
+                                  href="#"
+                                  ng-click="deleteCart($event,lit.id)"
+                                  style="padding-left: 4px"
+                                  ><i class="fa-solid fa-trash"></i
+                                ></a>
+                              </td>
+                              <td>
+                                <img
+                                  src="../../assets/leaf/{{lit.anh}}"
+                                  alt=""
+                                  style="width: 60px"
+                                />
+                              </td>
+                              <td>{{lit.tenSP}}</td>
+                              <td>
+                                <div class="form-group mb-0">
+                                  <input
+                                    type="number"
+                                    class="form-control cart-qty"
+                                    name="cartQty1"
+                                    id="cartQty1"
+                                    value="1"
+                                  />
+                                </div>
+                              </td>
+                              <td ng-model="donGia">
+                                {{lit.gia}} <sup>VND</sup>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <p
+                          style="
+                            background-color: aquamarine;
+                            height: 100%;
+                            margin: 0;
+                            padding: 10px;
+                          "
+                        >
+                          TOTAL:
+                          <span style="font-weight: 800; color: black"
+                            >100</span
+                          >
+                          VND
+                        </p>
+                      </div>
+                      <div class="col-6">
+                        <div class="justify-content-right">
+                          <div class="cart-footer text-right">
+                            <button type="button" class="btn btn-info my-1">
+                              <i class="ri-save-line mr-2"></i>Thanh toán
+                            </button>
+                            <a href="#shop" class="btn btn-success my-1"
+                              >Mua hàng<i class="ri-arrow-right-line ml-2"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End col -->
+      </div>
+      <!-- End row -->
+    </div>
+  </div>
+</section>

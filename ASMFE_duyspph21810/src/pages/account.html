@@ -1,0 +1,383 @@
+<style>
+  .table {
+    border: none;
+    font-size: 16px;
+  }
+</style>
+
+<section class="adminControl">
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <div class="cate-shop">
+          <div class="cate-shop-title">
+            <h3>MANAGE</h3>
+          </div>
+          <ul class="cate-shop-list">
+            <li class="cate-shop-item">
+              <a
+                href="#"
+                ng-class="{active:isActiveTab(1)}"
+                ng-click="changeTab(1)"
+              >
+                Product</a
+              >
+            </li>
+            <li class="cate-shop-item">
+              <a
+                href="#"
+                ng-class="{active:isActiveTab(2)}"
+                ng-click="changeTab(2)"
+                >Acount</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-10">
+        <div ng-show="current_tab == 2">
+          <div class="breadcrumb">
+            <ul>
+              <li><a href="#home">HOME </a></li>
+              <li><a href="#account">/ MANAGE</a></li>
+              <li><a href="#account">/ MYACCOUNT</a></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="changepass">
+                <button type="button" class="calac" ng-click="login()">
+                  <a
+                    href="changePass.html "
+                    target="_blank"
+                    class=""
+                    style="
+                      text-decoration: none;
+                      font-size: 20px;
+                      font-weight: 700;
+                      color: black;
+                    "
+                    >Changepass</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="justify-content-center" style="padding: 50px">
+                <img src="../../assets/avatar.png" alt="" width="100%" />
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="justify-content-right changepass">
+                <button>
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign out
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ng-show="current_tab == 1">
+          <div class="breadcrumb">
+            <ul>
+              <li><a href="#home">HOME </a></li>
+              <li><a href="#account">/ MANAGE</a></li>
+              <li><a href="#account">/ PRODUCT</a></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Type</th>
+                    <th>Del</th>
+                    <th>Vie</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="lst in listProduct">
+                    <td>{{lst.id}}</td>
+                    <td>
+                      <img
+                        src="../../assets/leaf/{{lst.image}}"
+                        style="width: 80px"
+                      />
+                    </td>
+                    <td>{{lst.name}}</td>
+                    <td>{{lst.price}}VND</td>
+                    <td>{{lst.typeID}}</td>
+                    <td>
+                      <a
+                        href=""
+                        ng-click="deleteProduct($event,lst.id)"
+                        style="padding-left: 4px"
+                        ><i class="fa-solid fa-trash"></i
+                      ></a>
+                    </td>
+                    <td>
+                      <a
+                        href=""
+                        ng-click="detailProduct(lst.id)"
+                        style="padding-left: 4px"
+                        ><i class="fa-regular fa-eye"></i
+                      ></a>
+                    </td>
+                  </tr>
+
+                  <!-- Add more rows here -->
+                </tbody>
+              </table>
+            </div>
+            <div class="col-4">
+              <form name="formProduct" class="CRUD">
+                <div class="row">
+                  <div class="col-8">
+                    <div class="form-group">
+                      <label for="id">ID</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="id"
+                        ng-model="id"
+                        placeholder="Enter ID"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <label for="image">Image</label>
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="image"
+                      ng-click="printf()"
+                      accept=".jpg, .jpeg, .png"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <label for="image">Image</label>
+                    <div class="col-4">
+                      <input
+                        type="button"
+                        value="Xác nhận"
+                        class="btn btn-primary"
+                        ng-click="tenanh()"
+                      />
+                    </div>
+                    <div class="col-8">
+                      <input
+                        ng-model="formProduct.image"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    ng-model="formProduct.name"
+                    placeholder="Enter name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="price">Price</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="price"
+                    ng-model="formProduct.price"
+                    placeholder="Enter price"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="type">Type</label>
+                  <div class="">
+                    <select
+                      class="combobox"
+                      ng-model="formProduct.typeID"
+                      required
+                    >
+                      <option value="" selected disabled>Hãy chọn tôi</option>
+                      <option
+                        ng-repeat="lstID in listCate"
+                        value="{{lstID.id}}"
+                        ng-selected="lstID.id == formProduct.typeID"
+                      >
+                        {{lstID.name}}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="info">Info</label>
+                  <textarea
+                    ng-model="formProduct.info"
+                    class="form-control"
+                    cols="30"
+                    placeholder="Enter info"
+                    required
+                    style="height: 80px"
+                  ></textarea>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col-4">
+                  <div class="justify-content-left">
+                    <a href="#" ng-click="refreshProduct($event)"
+                      ><i
+                        class="fa-solid fa-arrows-rotate"
+                        style="font-size: 28px; color: #4caf50"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="justify-content-right">
+                    <div class="btnNhong">
+                      <a
+                        class="left"
+                        href="#account"
+                        ng-click="addProduct($event)"
+                        >Add</a
+                      >
+                      <a
+                        class="right"
+                        href="#account"
+                        ng-click="updateProduct($event)"
+                        >Edit</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="breadcrumb">
+                <ul>
+                  <li><a href="#account">/ CATEGORY</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="col-8">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+
+                        <th>Name</th>
+                        <th>Del</th>
+                        <th>Vie</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="lstc in listCate">
+                        <td>{{lstc.id}}</td>
+
+                        <td>{{lstc.name}}</td>
+
+                        <td>
+                          <a
+                            href="#"
+                            ng-click="deleteCate($event,lstc.id)"
+                            style="padding-left: 4px"
+                            ><i class="fa-solid fa-trash"></i
+                          ></a>
+                        </td>
+                        <td>
+                          <a
+                            href=""
+                            ng-click="detailCate(lstc.id)"
+                            style="padding-left: 4px"
+                            ><i class="fa-regular fa-eye"></i
+                          ></a>
+                        </td>
+                      </tr>
+
+                      <!-- Add more rows here -->
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-4">
+                  <form class="CRUD" name="formCate">
+                    <div class="row">
+                      <div class="col-4">
+                        <div class="form-group">
+                          <label for="id">ID</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="id"
+                            ng-model="cid"
+                            placeholder="ID"
+                            disabled
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        ng-model="formCate.name"
+                        id="name"
+                        placeholder="Enter name"
+                        required
+                      />
+                    </div>
+                  </form>
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="justify-content-left">
+                        <a href="#" ng-click="refreshCate($event)"
+                          ><i
+                            class="fa-solid fa-arrows-rotate"
+                            style="font-size: 28px; color: #4caf50"
+                          ></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div class="justify-content-right">
+                        <div class="btnNhong">
+                          <a
+                            class="left"
+                            href="#account"
+                            ng-click="addCate($event)"
+                            >Add</a
+                          >
+                          <a
+                            class="right"
+                            href="#account"
+                            ng-click="updateCate($event)"
+                            >Edit</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,141 @@
+{
+  "product": [
+    {
+      "$error": {},
+      "$name": "formProduct",
+      "$dirty": true,
+      "$pristine": false,
+      "$valid": true,
+      "$invalid": false,
+      "$submitted": false,
+      "info": "Lá cau thường được sử dụng để cuốn các loại thức ăn như bánh tráng cuốn, cơm cuộn hay thịt cuốn, tùy theo từng vùng miền và nền văn hóa khác nhau. Ngoài ra, lá cau còn được sử dụng trong lễ cưới, lễ hội, các nghi lễ tín ngưỡng và văn hóa, như là một biểu tượng của sự gắn kết và truyền thống gia đình.",
+      "name": "Lá cau",
+      "price": 97,
+      "image": "anh4.png",
+      "typeID": "1",
+      "id": "xmMKN60"
+    },
+    {
+      "$error": {},
+      "$name": "formProduct",
+      "$dirty": true,
+      "$pristine": false,
+      "$valid": true,
+      "$invalid": false,
+      "$submitted": false,
+      "info": "Tuy nhiên, hiện nay việc sử dụng nước đã trở thành vấn đề nóng bỏng trong xã hội. Nước ngày càng khan hiếm do tác động của biến đổi khí hậu và sự phát triển kinh tế, và việc sử dụng nước bừa bãi dẫn đến sự suy thoái môi trường, ảnh hưởng đến cuộc sống của con người. Vì vậy, việc sử dụng và bảo vệ nước trở thành một vấn đề cấp bách trong thế giới hiện nay.",
+      "name": "Sóng nước",
+      "price": 16,
+      "image": "youtuber SaadbbcStudio (4).png",
+      "typeID": "3",
+      "id": "nNjI49Q"
+    },
+    {
+      "$error": {},
+      "$name": "formProduct",
+      "$dirty": true,
+      "$pristine": false,
+      "$valid": true,
+      "$invalid": false,
+      "$submitted": false,
+      "name": "Lá du du",
+      "price": 97,
+      "image": "anh1.png",
+      "typeID": "1",
+      "info": "Lá đu đủ, hay còn được gọi là lá papaya, là một loại lá được sử dụng rộng rãi trong ẩm thực và y học của nhiều quốc gia trên thế giới. Lá đu đủ có tên khoa học là Carica papaya, thuộc họ Đào lộn ngược (Caricaceae) và có nguồn gốc từ vùng nhiệt đới Châu Mỹ.",
+      "id": "9z1n_xF"
+    },
+    {
+      "$error": {},
+      "$name": "formProduct",
+      "$dirty": true,
+      "$pristine": false,
+      "$valid": true,
+      "$invalid": false,
+      "$submitted": false,
+      "name": "Lá cau",
+      "price": 97,
+      "image": "anh4.png",
+      "typeID": "1",
+      "info": "Lá cau thường được sử dụng để cuốn các loại thức ăn như bánh tráng cuốn, cơm cuộn hay thịt cuốn, tùy theo từng vùng miền và nền văn hóa khác nhau. Ngoài ra, lá cau còn được sử dụng trong lễ cưới, lễ hội, các nghi lễ tín ngưỡng và văn hóa, như là một biểu tượng của sự gắn kết và truyền thống gia đình.",
+      "id": "jwt8S-I"
+    },
+    {
+      "$error": {},
+      "$name": "formProduct",
+      "$dirty": true,
+      "$pristine": false,
+      "$valid": true,
+      "$invalid": false,
+      "$submitted": false,
+      "name": "Nước hình trái tim",
+      "price": 16,
+      "image": "youtuber SaadbbcStudio (5).png",
+      "typeID": "3",
+      "info": "Tuy nhiên, hiện nay việc sử dụng nước đã trở thành vấn đề nóng bỏng trong xã hội. Nước ngày càng khan hiếm do tác động của biến đổi khí hậu và sự phát triển kinh tế, và việc sử dụng nước bừa bãi dẫn đến sự suy thoái môi trường, ảnh hưởng đến cuộc sống của con người. Vì vậy, việc sử dụng và bảo vệ nước trở thành một vấn đề cấp bách trong thế giới hiện nay.",
+      "id": "8M2M5r7"
+    }
+  ],
+  "category": [
+    {
+      "name": "Cỏ",
+      "id": "1"
+    },
+    {
+      "name": "Kẹo",
+      "id": "2"
+    },
+    {
+      "$error": {},
+      "$name": "formCate",
+      "$dirty": true,
+      "$pristine": false,
+      "$valid": true,
+      "$invalid": false,
+      "$submitted": false,
+      "name": "Nước",
+      "id": "3"
+    },
+    {
+      "name": "Đá",
+      "id": "10"
+    }
+  ],
+  "account": [
+    {
+      "username": "duysp",
+      "password": "duydeptrai",
+      "role": true,
+      "id": "1"
+    },
+    {
+      "username": "username2",
+      "password": "password2",
+      "role": false,
+      "id": "2"
+    }
+  ],
+  "cart": [
+    {
+      "id": 11,
+      "idSP": "XJID1yI",
+      "tenSP": "Lá cọ",
+      "gia": 68,
+      "anh": "anh9.png"
+    },
+    {
+      "id": 12,
+      "idSP": "pls1tMa",
+      "tenSP": "Nước Trái tym",
+      "gia": 12,
+      "anh": "youtuber SaadbbcStudio (1).png"
+    },
+    {
+      "id": 13,
+      "idSP": "xmMKN60",
+      "tenSP": "Lá cau",
+      "gia": 97,
+      "anh": "anh4.png"
+    }
+  ]
+}

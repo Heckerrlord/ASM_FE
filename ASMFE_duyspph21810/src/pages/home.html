@@ -1,0 +1,273 @@
+<!-- SLIDESHOW -->
+<section class="slideShow">
+  <div class="container">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="#home">HOME </a></li>
+      </ul>
+    </div>
+    <div class="row">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="../../assets/imgslide/anh7.png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../../assets/imgslide/anh8.png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../../assets/imgslide/anh9.png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="newProduct">
+  <div class="container">
+    <div class="nTab">
+      <div class="row">
+        <div class="col-3"><h3>NEW PRODUCT</h3></div>
+        <div class="col-9">
+          <ul class="nav justify-content-right">
+            <li class="nav-item">
+              <a class="nav-link active" href="#grass">GRASS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#candy">CANDY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#rock">ROCK</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="nProduct">
+      <div class="row">
+        <div
+          class="col-lg-3"
+          ng-repeat="lst in listProduct.slice(listProduct.length-4)"
+        >
+          <div class="card">
+            <div class="image-container">
+              <img
+                src="../../assets/leaf/{{lst.image}}"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="caption">
+                <a class="nav-link" href="#detail/{{lst.id}}">Chi tiết</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{lst.name}}</h5>
+              <h5 class="card-price">{{lst.price}} VND</h5>
+              <a ng-click="addToCart($event,lst.id)" class="btn btn-primary"
+                ><i class="fa-solid fa-cart-plus"></i> Add to cart</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="quangCao">
+      <div class="row">
+        <div class="col-4">
+          <div class="qc1">
+            <h1>
+              <i class="fa-regular fa-money-bill-1"></i> HOÀN
+              <strong>TIỀN!</strong>
+            </h1>
+            <p>Trả hàng hoàn tiền trong 30 ngày</p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="qc2">
+            <h1>
+              <i class="fa-solid fa-percent"></i><strong> HOT</strong> SALE!
+            </h1>
+            <p>Sale đến 70% giá trị của sản phẩm</p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="qc3">
+            <h1>
+              <i class="fa-solid fa-truck-fast"></i> FREE
+              <strong>SHIP!</strong>
+            </h1>
+            <p>Free ship cho khách hàng tại hà nụi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="nTab">
+      <div class="row">
+        <div class="col-3"><h3>HOT SALE</h3></div>
+      </div>
+    </div>
+    <div class="nProduct">
+      <div class="row">
+        <div class="col-4">
+          <div class="card" style="width: 100%">
+            <img
+              src="../../assets/imgslide/image1.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">$500</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card" style="width: 100%">
+            <img
+              src="../../assets/imgslide/image1.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">$500</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card" style="width: 100%">
+            <img
+              src="../../assets/imgslide/image1.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">$500</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="nTab" style="margin-top: 20px">
+      <div class="row">
+        <div class="col-3"><h3>WEEKLY FEATURED</h3></div>
+      </div>
+    </div>
+    <div class="nProduct">
+      <div class="row">
+        <div
+          class="col-3"
+          ng-repeat="lst in listProduct.slice(listProduct.length-4)"
+        >
+          <div class="product-card">
+            <img
+              src="../../assets/leaf/{{lst.image}}"
+              alt="Product Image"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h3 class="product-name">{{lst.name}}</h3>
+              <del
+                class="product-price"
+                style="font-weight: 100; font-size: 10px"
+                >{{lst.price}}</del
+              >
+              <p class="product-price">
+                {{lst.price}}
+                <a href="#detail/{{lst.id}}">view more</a>
+              </p>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.543365979773!2d105.73705594948436!3d21.050949492329853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134550cd52de961%3A0x9495e0bf9570552e!2zU-G7kSA2NiBuZ8O1IDIgTmd1ecOqbiBYw6E!5e0!3m2!1svi!2s!4v1676533030474!5m2!1svi!2s"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</section>

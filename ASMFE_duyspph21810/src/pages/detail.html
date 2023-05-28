@@ -1,0 +1,112 @@
+<section class="detailProduct">
+  <div class="container">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="#home">HOME </a></li>
+        <li><a href="#shop">/ SHOP</a></li>
+        <li><a href="#">/ DETAIL</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="detailP">
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="../../assets/leaf/{{product.image}}"
+            class="img-fluid"
+            alt="Product Image"
+          />
+        </div>
+        <div class="col-md-6">
+          <h1><span style="font-weight: 100">Tên :</span> {{product.name}}</h1>
+          <h2>
+            <span style="font-weight: 100"> Giá :</span>
+            <span style="color: #85c94f">{{product.price}}</span>
+            <sup>VND</sup>
+          </h2>
+          <p>{{product.info}}</p>
+          <hr />
+          <h3><span style="font-weight: 100">Loại :</span> {{lsp.name}}</h3>
+
+          <hr />
+          <button type="button" class="btn btn-primary">
+            <a href="#" class="nav-link" ng-click="addToCart($event,product.id)"
+              >Add to Cart</a
+            >
+          </button>
+          <div class="contactdetail">
+            <ul class="nav justify-content-left">
+              <a
+                class="nav-link"
+                href="https://www.facebook.com/tenduy.hophuc.73"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a class="nav-link" href="https://www.instagram.com/duydz.il/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                class="nav-link"
+                href="https://www.youtube.com/channel/UCV5H-PmOSC73BynqSJQAH_Q"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="nav-link" href="https://github.com/Heckerrlord"
+                ><i class="fab fa-github"></i
+              ></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      .
+    </div>
+    <div class="sameProduct">
+      <div class="nTab">
+        <div class="row">
+          <div class="col-6"><h3>Product Recommendations</h3></div>
+          <div class="col-6">
+            <ul class="nav justify-content-right">
+              <li class="nav-item">
+                <a class="nav-link active" href="#shop" style="border: none"
+                  ><i class="fa-regular fa-eye"></i> View more</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col-2" ng-repeat="lst in listRecommen">
+            <div class="card">
+              <div class="image-container">
+                <img
+                  src="../../assets/leaf/{{lst.image}}"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="caption">
+                  <a
+                    class="nav-link"
+                    href="#detail/{{lst.id}}"
+                    ng-click="detailProduct(lst.id)"
+                    >Chi tiết</a
+                  >
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{lst.name}}</h5>
+                <h5 class="card-price">{{lst.price}} VND</h5>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  ng-click="addToCart($event,lst.id)"
+                  ><i class="fa-solid fa-cart-plus"></i> Add to cart</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

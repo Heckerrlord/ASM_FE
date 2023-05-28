@@ -1,0 +1,305 @@
+<style>
+  .table {
+    border: none;
+    font-size: 16px;
+  }
+</style>
+<section class="adminControl">
+  <div class="container">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="#home">HOME </a></li>
+        <li><a href="#account">/ ACCOUNT</a></li>
+      </ul>
+    </div>
+    <div class="tabs">
+      <ul class="nav-tabs">
+        <li><a href="tab_Myacc">Menu 1</a></li>
+        <li><a href="tab_Product">Menu 2</a></li>
+        <li><a href="tab_Cate">Menu 3</a></li>
+      </ul>
+    </div>
+    <div class="tab-content-item" id="tab_Myacc">a</div>
+    <div class="tab-content-item" id="tab_Product">
+      <div class="row">
+        <div class="col-8">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Type</th>
+                <th>Del</th>
+                <th>Vie</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <img
+                    src="../../assets/imgslide/anh7.png"
+                    style="width: 80px"
+                  />
+                </td>
+                <td>Product 1</td>
+                <td>$10.00</td>
+                <td>Type A</td>
+                <td>
+                  <a href="#" style="padding-left: 4px"
+                    ><i class="fa-solid fa-trash"></i
+                  ></a>
+                </td>
+                <td>
+                  <a href="#" style="padding-left: 4px"
+                    ><i class="fa-regular fa-eye"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <!-- Add more rows here -->
+            </tbody>
+          </table>
+        </div>
+        <div class="col-4">
+          <form class="CRUD">
+            <div class="row">
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="id">ID</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="id"
+                    placeholder="Enter ID"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="form-group">
+                  <label for="image">Image</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="image"
+                    placeholder="Enter image URL"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input
+                type="text"
+                class="form-control"
+                id="price"
+                placeholder="Enter price"
+              />
+            </div>
+            <div class="form-group">
+              <label for="type">Type</label>
+              <select class="form-control" id="type">
+                <option>Type A</option>
+                <option>Type B</option>
+                <option>Type C</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="info">Info</label>
+              <textarea
+                name="info"
+                class="form-control"
+                id=""
+                cols="30"
+                rows="10"
+                style="height: 80px"
+              ></textarea>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-4">
+              <div class="justify-content-left">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-arrows-rotate"
+                    style="font-size: 28px; color: #4caf50"
+                  ></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="justify-content-right">
+                <div class="btnNhong">
+                  <a class="left" href="#account">Add</a>
+                  <a class="right" href="#account">Edit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content-item" id="tab_Cate">
+      <div class="row">
+        <div class="col-8">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Type</th>
+                <th>Del</th>
+                <th>Vie</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <img
+                    src="../../assets/imgslide/anh7.png"
+                    style="width: 80px"
+                  />
+                </td>
+                <td>Product 1</td>
+                <td>$10.00</td>
+                <td>Type A</td>
+                <td>
+                  <a href="#" style="padding-left: 4px"
+                    ><i class="fa-solid fa-trash"></i
+                  ></a>
+                </td>
+                <td>
+                  <a href="#" style="padding-left: 4px"
+                    ><i class="fa-regular fa-eye"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <!-- Add more rows here -->
+            </tbody>
+          </table>
+        </div>
+        <div class="col-4">
+          <form class="CRUD">
+            <div class="row">
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="id">ID</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="id"
+                    placeholder="Enter ID"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="form-group">
+                  <label for="image">Image</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="image"
+                    placeholder="Enter image URL"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input
+                type="text"
+                class="form-control"
+                id="price"
+                placeholder="Enter price"
+              />
+            </div>
+            <div class="form-group">
+              <label for="type">Type</label>
+              <select class="form-control" id="type">
+                <option>Type A</option>
+                <option>Type B</option>
+                <option>Type C</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="info">Info</label>
+              <textarea
+                name="info"
+                class="form-control"
+                id=""
+                cols="30"
+                rows="10"
+                style="height: 80px"
+              ></textarea>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-4">
+              <div class="justify-content-left">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-arrows-rotate"
+                    style="font-size: 28px; color: #4caf50"
+                  ></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="justify-content-right">
+                <div class="btnNhong">
+                  <a class="left" href="#account">Add</a>
+                  <a class="right" href="#account">Edit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/plugin/jquery.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".tab-content-item").hide();
+      $(".tab-content-item:last-child").fadeIn();
+      $(".nav-tabs li").click(function () {
+        //lam hovẻ chuyen trang
+        //   $(".tenclass li").removeClass("active");
+        //   $(this).addClass("active");
+        //chuyen tab
+        $(".tab-content-item").hide();
+        let idtab = $(this).children("a").attr("href");
+        idtab.fadeIn();
+        return false;
+      });
+    });
+  </script>
+</section>

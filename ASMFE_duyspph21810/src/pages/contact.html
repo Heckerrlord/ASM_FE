@@ -1,0 +1,162 @@
+<section class="contact">
+  <link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+  <div class="container bootstrap snippets bootdeys">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="#home">HOME </a></li>
+        <li><a href="#contact">/ CONTACT</a></li>
+      </ul>
+    </div>
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="contact-detail-box">
+          <i class="fa fa-th fa-3x text-colored"></i>
+          <h4>Get In Touch</h4>
+          <abbr title="Phone"></abbr> (+84) 352 255 034<br />
+
+          <a href="mailto:email@email.com" class="text-muted"
+            >duyspph21810@fpt.edu.vn</a
+          >
+        </div>
+      </div>
+      <!-- end col -->
+
+      <div class="col-sm-4">
+        <div class="contact-detail-box">
+          <i class="fa fa-map-marker fa-3x text-colored"></i>
+          <h4>Our Location</h4>
+
+          <address>
+            2/132/66/2<br />
+            Cau Dien street, Na Noi<br />
+          </address>
+        </div>
+      </div>
+      <!-- end col -->
+
+      <div class="col-sm-4">
+        <div class="contact-detail-box">
+          <i class="fa fa-book fa-3x text-colored"></i>
+          <h4>24x7 Support</h4>
+
+          <p>Staff will respond as soon as possible.</p>
+        </div>
+      </div>
+      <!-- end col -->
+    </div>
+    <!-- end row -->
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.480870321887!2d105.7353285144766!3d21.053447885985058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454f82e59bfc3%3A0x86db2b6e4b731c6f!2zNjYgTmcuIDEzMiBD4bqndSBEaeG7hW4sIE5ndXnDqm4gWMOhLCBC4bqvYyBU4burIExpw6ptLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1676663600071!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <!-- end col -->
+
+      <!-- Contact form -->
+      <div class="col-sm-6">
+        <form
+          role="form"
+          name="ajax-form"
+          id="ajax-form"
+          action="https://formsubmit.io/send/coderthemes@gmail.com"
+          method="post"
+          class="form-main"
+        >
+          <div class="form-group">
+            <label for="name2">Name</label>
+            <input
+              class="form-control"
+              id="name2"
+              name="name"
+              onblur="if(this.value == '') this.value='Name'"
+              onfocus="if(this.value == 'Name') this.value=''"
+              type="text"
+              value="Name"
+            />
+            <div class="error" id="err-name" style="display: none">
+              Please enter name
+            </div>
+          </div>
+          <!-- /Form-name -->
+
+          <div class="form-group">
+            <label for="email2">Email</label>
+            <input
+              class="form-control"
+              id="email2"
+              name="email"
+              type="text"
+              onfocus="if(this.value == 'E-mail') this.value='';"
+              onblur="if(this.value == '') this.value='E-mail';"
+              value="E-mail"
+            />
+            <div class="error" id="err-emailvld" style="display: none">
+              E-mail is not a valid format
+            </div>
+          </div>
+          <!-- /Form-email -->
+
+          <div class="form-group">
+            <label for="message2">Message</label>
+            <textarea
+              class="form-control"
+              id="message2"
+              name="message"
+              rows="5"
+              onblur="if(this.value == '') this.value='Message'"
+              onfocus="if(this.value == 'Message') this.value=''"
+            >
+Message</textarea
+            >
+
+            <div class="error" id="err-message" style="display: none">
+              Please enter message
+            </div>
+          </div>
+          <!-- /col -->
+
+          <div class="row">
+            <div class="col-xs-12">
+              <div id="ajaxsuccess" class="text-success">
+                E-mail was successfully sent.
+              </div>
+              <div class="error" id="err-form" style="display: none">
+                There was a problem validating the form please check!
+              </div>
+              <div class="error" id="err-timedout">
+                The connection to the server timed out!
+              </div>
+              <div class="error" id="err-state"></div>
+              <button
+                type="submit"
+                class="btn btn-primary btn-shadow btn-rounded w-md"
+                id="send"
+                style="margin-top: 20px"
+              >
+                Submit
+              </button>
+            </div>
+            <!-- /col -->
+          </div>
+          <!-- /row -->
+        </form>
+        <!-- /form -->
+      </div>
+      <!-- end col -->
+    </div>
+    <!-- end row -->
+  </div>
+</section>

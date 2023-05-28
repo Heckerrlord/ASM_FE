@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/plugin/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/custom/style.css" />
+    <link rel="stylesheet" href="../css/custom/CSSICON/css/all.css" />
+  </head>
+  <body ng-app="myModule">
+    <!-- HEADER -->
+    <header ng-include="'layout/header.html'"></header>
+    <!-- CONTENT -->
+    <main ng-view></main>
+    <!-- FOOTER -->
+    <footer ng-include="'layout/footer.html'"></footer>
+
+    <script src="../lib/angular.js"></script>
+    <script src="../lib/angular-route.js"></script>
+    <script src="../js/plugin/bootstrap.min.js"></script>
+    <script src="../js/plugin/jquery.js"></script>
+    <script src="controller/productController/productController.js"></script>
+    <script src="controller/productController/detailController.js"></script>
+    <script src="controller/productController/shopCotroller.js"></script>
+    <script src="config/api.js"></script>
+    <script src="route.js"></script>
+  </body>
+</html>

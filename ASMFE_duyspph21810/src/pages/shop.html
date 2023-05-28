@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="breadcrumb">
+    <ul>
+      <li><a href="#home">HOME </a></li>
+      <li><a href="#shop">/ SHOP</a></li>
+    </ul>
+  </div>
+</div>
+<section class="shop1">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <h2>SORT BY</h2>
+        <hr />
+        <div class="cate-shop">
+          <div class="cate-shop-title">
+            <h3>CATEGORY</h3>
+          </div>
+          <ul class="cate-shop-list">
+            <li class="cate-shop-item">
+              <a href="#"
+                ><i class="fa-brands fa-canadian-maple-leaf"></i> List of
+                grass</a
+              >
+            </li>
+            <li class="cate-shop-item">
+              <a href="#"
+                ><i class="fa-solid fa-hill-rockslide"></i> All rock</a
+              >
+            </li>
+            <li class="cate-shop-item">
+              <a href="#"><i class="fa-solid fa-candy-cane"></i> Candy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="row">
+          <div class="col-6">
+            <div class="breadcrumb" style="padding: 0; background-color: white">
+              <ul>
+                <li><a href="#home">SHOP </a></li>
+                <li><a href="#shop">/ GLASS</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="dropdown">
+              <select class="combobox" ng-model="as" ng-change="filList()">
+                <option value="">Tất cả</option>
+                <option ng-repeat="cate in listCate" value="{{cate.id}}">
+                  {{cate.name}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="btn-sort">
+              <a href="#"><i class="fa-solid fa-arrow-up-short-wide"></i></a>
+              <a href="#"><i class="fa-solid fa-arrow-up-wide-short"></i></a>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="row">
+          <div class="col-4" ng-repeat="lst in filProducts">
+            <div class="card">
+              <div class="image-container">
+                <img
+                  src="../../assets/leaf/{{lst.image}}"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="caption">
+                  <a class="nav-link" href="#detail/{{lst.id}}">Chi tiết</a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{lst.name}}</h5>
+                <h5 class="card-price">{{lst.price}} VND</h5>
+                <a class="btn btn-primary" ng-click="addToCart($event,lst.id)"
+                  ><i class="fa-solid fa-cart-plus"></i> Add to cart</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
